@@ -1,3 +1,10 @@
 langchain
 langgraph
 python-dotenv
+langchain-community
+huggingface_hub
+ollama
+langchain-openai
+langchain-ollama
+langchain-core
+langchain_huggingface
