@@ -9,3 +9,5 @@ langchain-ollama
 langchain-core
 langchain_huggingface
 streamlit
+pypdf
+beautifulsoup4
