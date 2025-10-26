@@ -1,4 +1,3 @@
-from langchain_core.runnables import RunnablePassthrough
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import ChatPromptTemplate
 from langchain_huggingface import ChatHuggingFace, HuggingFaceEndpoint, HuggingFaceEmbeddings
@@ -46,7 +45,7 @@ prompt = ChatPromptTemplate.from_template(template)
 
 rag_chain = (
     {
-        "context": itemgetter("question") | retriever,
+        "context": itemgetter("question") | retriever, # type: ignore
         "question": itemgetter("question")
     }| prompt | model | StrOutputParser()
 )
@@ -54,3 +53,9 @@ rag_chain = (
 # 7. Run
 result = rag_chain.invoke({"question": "Tell me about Earth's satellite."})
 print(result)
+
+
+"""
+question → retriever → context → prompt → model → clean text
+
+"""
