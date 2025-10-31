@@ -11,3 +11,5 @@ langchain_huggingface
 streamlit
 pypdf
 beautifulsoup4
+sympy
+wikipedia

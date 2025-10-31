@@ -16,7 +16,10 @@ def input_node(state : GraphState) -> dict:
 from langchain_ollama import ChatOllama
 from langchain_core.messages import HumanMessage
 
-llm = ChatOllama(model="qwen3:0.6b")
+# llm = ChatOllama(model="qwen3:0.6b")
+llm = ChatOllama(
+    model="minimax-m2:cloud"
+)
 
 def summarizer_node(state: GraphState) -> dict:
     user_text = state["user_input"]

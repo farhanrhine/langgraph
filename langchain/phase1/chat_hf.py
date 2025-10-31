@@ -8,6 +8,7 @@ llm = HuggingFaceEndpoint(
     task="text-generation"
 ) # type: ignore
 # repo_id="HuggingFaceH4/zephyr-7b-beta",
+# MiniMaxAI/MiniMax-M2
 
 model = ChatHuggingFace(llm=llm)
 
